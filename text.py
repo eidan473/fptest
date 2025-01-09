@@ -68,6 +68,48 @@ system("cls")
     
 # print ("cuantas entradas desea")
 # num2=int(input())
-monto=200    
-print("pertence a la florida?")
-if 
+
+
+
+
+
+
+
+# for x in range (45):
+#     for i in range (90):
+#         print (x+1,"x",i+1,"=",(i+1)*(x+1)) 
+
+
+
+
+
+
+
+# for i in range (20):
+#     print ("edad",+i+1)
+
+
+
+
+
+
+
+
+# total=0
+# for i in range (2):
+#   print ("ingrese nota")
+#   nota=int(input())
+#   total=total+nota
+# print("su promedio es",total/(i+1))
+
+
+# num =int (input("ingrese numero"))
+# for i in range (num+1):
+#     if i%2!=0:
+#         print("el numero no es par",i)
+
+
+        
+        
+        
+
