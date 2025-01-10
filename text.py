@@ -109,7 +109,43 @@ system("cls")
 #         print("el numero no es par",i)
 
 
-        
-        
+      
+      
+      
+      
+      
+# tacos=1      
+# pizza=2
+# humitas=3
+# cazuela=4
+# print("elija una opcion de comida")  
+# print("tacos=1 pizza=2 humitas=3 cazzuela=4")
+# op=int(input())
+# if op ==(1):
+#         print("usted prefiere los tacos")
+# elif (op==(2)):
+#         print("usted prefiere la pizza")
+# elif (op==(2)):
         
 
+# comida=100
+# while comida !=0:
+#     print("comer? si/no")
+#     verifica=input()
+#     if verifica=="si":
+#         comida=comida-25
+#         print ("queda", comida)
+#     else:
+#         print("no comió")        
+
+
+num=""
+print("ingrse numero")
+contra=input()
+while contra !="1253":
+    contra=input()
+        
+print("Bienvenido")
+
+
+            
