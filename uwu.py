@@ -31,41 +31,43 @@ system("cls")
 
 
 
-arroz_ala_francesa=1
-arroz_marinero=2
-sopa_marinera=3
-salir=4
 
-
-
-
-
+total=0
 while True:
-    print("ingrse su nombre")
-    print("ingresa al menu")
-    print("saludo")
-    print("salir")
+    print("ingrse su nombre=1")
+    print("ingresa al menu=2")
+    print("saludo=3")
+    print("salir=4")
     opc=int(input())
     if opc==1:
-        nom=input("ingreser noombre")
+        nom=input("ingreser nombre\n")
+        print(f"su nombre ahora es {nom}")
     if opc==2:
         while True:
-            print("elija una opcion de comida para elejir debe seleccionar el umero que esta en el = \n arroz_ala_francesa 4.500 =1\n arroz_mariner5.200 =2 \n sopa_marinera 9.700 =3  \n salir=4")
+            print("elija una opcion de comida para elejir debe seleccionar el numero que esta en el = \n arroz_ala_francesa 4.500 =1\n arroz_mariner5.200 =2 \n sopa_marinera 9.700 =3  \n salir=4")
             op =int(input())
             if op==1:
-                print("quiere arroz a la francesa")
+                total=total+4500
+                print("quiere arroz a la francesa\n",total)
             if op==2:
-                print("quiere arroz marinero")
+                total=total+5200
+                print("quiere arroz marinero\n",total)
             if op==3:
-                print ("sopa marinera")
+                total=total+9700
+                print ("sopa marinera\n",total)
             if op ==4:
                 print("salir")
                 break
+            elif op >4:
+                print("Opción no válida por favor intente nuevamente.")
+     
     if opc==3:
-     print("gracias",nom,"por venir restaurant panuchis")
+        print("gracias",nom,"por venir restaurant panuchis")
     if opc==4:
          print("salir")
          break
+    elif opc >4:
+        print("Opción no válida por favor intente nuevamente.")
      
                 
         
