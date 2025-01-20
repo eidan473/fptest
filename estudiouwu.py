@@ -99,16 +99,22 @@ system("cls")
 
 ju1=60
 ju2=60
-
+ba1=0
+ba2=0
 p1=""
 p2=""
 import random
+def variable():
+    global ju1
+    global ju2
+    global p1
+    global p2
+
 def atake():
     return random.randint(2,10)
-ataki=atake()
-
-
 def persona():
+    global ju1
+    global ju2
     while True:
         print("apreta 1 para que el jugador 1 elija personaje")
         print("apreta 2 para que el jugador 2 elija personaje")
@@ -124,20 +130,21 @@ def persona():
                 print("Blanka=4")
                 opc=int(input())
                 if opc==1:
-                    print("usted elije a ryu")
                     p1="ryu"
+                    print("usted elije a ",p1)
+                    
                     break
                 elif opc==2:
                     p1="chun_Li"
-                    print("usted elije a chun_Li")
+                    print("usted elije a ",p1)
                     break
                 elif opc==3:
                     p1="ken"
-                    print("usted elije a ken")
+                    print("usted elije a ",p1)
                     break
                 elif opc==4:
                     p1="blanka"
-                    print("usted elije a blanka") 
+                    print("usted elije a ",p1) 
                     break
                 else:
                     print("opc invalida")
@@ -151,47 +158,63 @@ def persona():
                 opc=int(input())
                 if opc==1:
                     p2="ryu"
-                    print("usted elije a ryu")
+                    print("usted elije a",p2)
                     break
                 elif opc==2:
                     p2="chun-li"
-                    print("usted elije a chun_Li")
+                    print("usted elije a",p2)
                     break
                 elif opc==3:
                     p2="ken"
-                    print("usted elije a ken")
+                    print("usted elije a ",p2)
                     break
                 elif opc==4:
                     p2="blanka"
-                    print("usted elije a blanka")
+                    print("usted elije a ",p2)
                     break
         elif op ==3:
             print("jugar")
             break
 def jugar():
+    global p1
+    global p2
+    global ju1
+    global ju2
+    global ba1
+    global ba2
     while True:
-        print("jugador 1 es tu turno=4")
-        opcii=int(input())
-        if opcii==4:
-            while True:
-                print("jugador 1 lanzara el primer ataque")
-                print("para atakar selecione 8")
-                atak=int(input())
-                if atak==8:
-                    ju2-ataki
-                    print("lo dejaste a ",ju2)
-        print("jugador 2 es tu turno")
-        opcii=int(input())
-        if opcii==4:
-            while True:
-                print("jugador 1 lanzara el primer ataque")
-                print("para atakar selecione 8")
-                atak=int(input())
-                if atak==8:
-                    ataki-ju1
-                    print("lo dejaste a ",ju1)
-                
-                    
+        for i in range(2):
+            print("turno del jugador 1 presione uno para atakar")
+            jugar=int(input("presione 1"))
+            if jugar==1:
+                if  i==0:
+                    ju2=ju2-atake()
+                    ba2="/"*ju2
+                    print(ba2)
+                    print(" la vida que lo dejo es a",ju2)
+                    if ju2>=0:
+                        print ("gana",p1)
+                        break
+            print("turno del jugador 2 presione 2 para atakar")
+            jugar=int(input("ingrese 2"))
+            if jugar==2:
+                if i==1:
+                    ju1=ju1-atake()
+                    ba1="/"*ju1
+                    print(ba1)
+                    print(" la vida que lo dejo es a",ju1)
+                    if ju1>=0:
+                        print ("gana",p2)
+                        break
+persona()
+
+jugar()
+            
+
+
+
+
+                        
                     
                     
                 
@@ -199,16 +222,7 @@ def jugar():
                 
                 
     
-opi=int(input("1 para elejir personaje y 2 para jugar"))
-match opi:
-    case 1:
-        persona()
-        print(p1)
-        print(p2)
-        jugar()
-    case 2:
-        jugar()
-        
+
         
     
     
