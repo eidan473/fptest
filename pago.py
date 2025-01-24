@@ -9,6 +9,7 @@ a=0
 car=0
 
 
+
 while True:
     print("comprar=1")
     print ("con que quiere pagar=2")
